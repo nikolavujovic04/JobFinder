@@ -14,7 +14,7 @@ import androidx.room.PrimaryKey
     )]
 )
 data class JobSeeker(
-    @PrimaryKey val id: Int,
+    @PrimaryKey val userId: Int,
     val firstName: String,
     val lastName: String,
     val bio: String = ""
