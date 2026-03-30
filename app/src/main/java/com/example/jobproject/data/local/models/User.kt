@@ -9,7 +9,8 @@ data class User(
     val username: String,
     val email: String,
     val password: String,
-    val role: UserRole
+    val role: UserRole,
+    val syncStatus: SyncStatus = SyncStatus.CREATED
 )
 
 enum class UserRole{
