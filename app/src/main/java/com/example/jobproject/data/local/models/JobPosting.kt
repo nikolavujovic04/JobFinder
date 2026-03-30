@@ -7,6 +7,12 @@ import java.time.LocalDate
 
 @Entity(
     tableName = "job_postings",
+    foreignKeys = [ForeignKey(
+        entity = User::class,
+        parentColumns = ["id"],
+        childColumns = ["userId"],
+        onDelete = ForeignKey.CASCADE
+    )]
     )
 data class JobPosting(
     @PrimaryKey val idJobPosting: Int,
