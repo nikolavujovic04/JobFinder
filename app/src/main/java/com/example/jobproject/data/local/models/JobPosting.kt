@@ -12,7 +12,13 @@ import java.time.LocalDate
         parentColumns = ["id"],
         childColumns = ["userId"],
         onDelete = ForeignKey.CASCADE
-    )]
+    ),
+        ForeignKey(
+            entity = Job::class,
+            parentColumns = ["id"],
+            childColumns = ["jobId"],
+            onDelete = ForeignKey.CASCADE
+        )]
     )
 data class JobPosting(
     @PrimaryKey val idJobPosting: Int,
